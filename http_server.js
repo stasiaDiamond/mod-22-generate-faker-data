@@ -49,6 +49,19 @@ app.post('/add', function (req, res) {
     res.send(db.get('users').value());
 });
 
+// handle GET requests to /accounts endpoint
+app.get('/accounts', function (req, res) {
+    res.send("I'm a GET request to the /accounts endpoint!");
+});
+
+// handle POST requests to /accounts endpoint
+app.post('/accounts', function (req, res) {
+    // Example: Create a new account based on data in the request body
+    // Replace this with your actual logic
+    res.send("I'm a POST request to the /accounts endpoint!");
+});
+
+
 // start server
 // -----------------------
 app.listen(port, function () {
